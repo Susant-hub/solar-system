@@ -6,7 +6,7 @@ export const planets = [
     radius: "2,439 km",
     weightRatio: 0.38,
     funFact: "Mercury has the shortest year of all the planets.",
-    image: "/public/images/mercury.png",
+    image: "/images/mercury.png",
   },
   {
     name: "Venus",
@@ -15,7 +15,7 @@ export const planets = [
     radius: "6,052 km",
     weightRatio: 0.91,
     funFact: "Venus rotates in the opposite direction to most planets.",
-    image: "/public/images/venus.png",
+    image: "/images/venus.png",
   },
   {
     name: "Earth",
@@ -24,7 +24,7 @@ export const planets = [
     radius: "6,371 km",
     weightRatio: 1,
     funFact: "Earth is the only planet known to support life.",
-    image: "/public/images/earth.png",
+    image: "/images/earth.png",
   },
   {
     name: "Mars",
@@ -33,7 +33,7 @@ export const planets = [
     radius: "3,389 km",
     weightRatio: 0.38,
     funFact: "Mars is home to Olympus Mons, the tallest volcano in the solar system.",
-    image: "/public/images/mars.png",
+    image: "/images/mars.png",
   },
   {
     name: "Jupiter",
@@ -42,7 +42,7 @@ export const planets = [
     radius: "69,911 km",
     weightRatio: 2.34,
     funFact: "Jupiter has the strongest gravity of all the planets.",
-    image: "/public/images/jupiter.png",
+    image: "/images/jupiter.png",
   },
   {
     name: "Saturn",
@@ -51,7 +51,7 @@ export const planets = [
     radius: "58,232 km",
     weightRatio: 1.06,
     funFact: "Saturn could float in water if a bathtub big enough existed.",
-    image: "/public/images/saturn.png",
+    image: "/images/saturn.png",
   },
   {
     name: "Uranus",
@@ -60,7 +60,7 @@ export const planets = [
     radius: "25,362 km",
     weightRatio: 0.92,
     funFact: "Uranus rotates on its side, unlike any other planet.",
-    image: "/public/images/uranus.png",
+    image: "/images/uranus.png",
   },
   {
     name: "Neptune",
@@ -69,6 +69,6 @@ export const planets = [
     radius: "24,622 km",
     weightRatio: 1.19,
     funFact: "Neptune has the fastest winds in the solar system.",
-    image: "/public/images/neptune.png",
+    image: "/images/neptune.png",
   },
 ];
