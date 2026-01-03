@@ -12,7 +12,7 @@ function App() {
     radius: "58,232 km",
     weightRatio: 1.06,
     funFact: "Saturn could float in water if a bathtub big enough existed.",
-    image: "/public/images/saturn.png",
+    image: "/images/saturn.png",
   });
   const [message, setMessage] = useState(true);
   const [objectWeight, setObjectWeight] = useState(0);
