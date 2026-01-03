@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$primary-font: "Inter", sans-serif;
+
+$fw-regular: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$clr-text-primary: #ffffff;
+$clr-text-secondary: rgba(255, 255, 255, 0.75);
+$clr-text-highlight: rgba(125, 158, 215, 1) 100%;
+
+$clr-text-muted: rgba(255, 255, 255, 0.5);
+
+$clr-accent: #ff8a3d;
+$clr-accent-soft: rgba(255, 138, 61, 0.75);
+
+$spacing-100: 0.5rem;
+$spacing-200: 1rem;
+$spacing-300: 1.75rem;
+$spacing-400: 2rem;
+$spacing-500: 2.5rem;
+$spacing-600: 4rem;
+$spacing-700: 6rem;
+$spacing-800: 8rem;
+$spacing-900: 10rem;
+
+$fs-h1: 3rem;
+$fs-h2: 2.5rem;
+$fs-h3: 1.5rem;
+
+$fs-button: 1.25rem;
+$fs-body: 1rem;
+$fs-input: 0.75rem;
+
+$lh-tight: 1.2;
+$lh-normal: 1.5;
+$lh-relaxed: 1.65;
+
+$glass-bg: rgba(20, 25, 35, 0.2);
+$glass-border: rgba(255, 255, 255, 0.15);
+$glass-blur: blur(1rem);
+$border-radius: 0.5rem;

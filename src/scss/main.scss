@@ -1,0 +1,237 @@
+@use "./reset";
+@use "./variables" as *;
+
+.page {
+  background-image: url(../public/images/star-bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100dvh;
+
+  display: grid;
+  grid-template-columns:
+    1rem
+    minmax(0, 1fr)
+    1rem;
+}
+
+@media (min-width: 48em) {
+  .page {
+    grid-template-columns:
+      1fr
+      minmax(0, 60rem)
+      1fr;
+  }
+}
+
+.page > * {
+  grid-column: 2;
+}
+
+// Utitlity classes
+.text-highlight {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 20%,
+    $clr-text-highlight
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  color: $clr-text-primary;
+  background: linear-gradient(90deg, #3a4b6b 0%, #ff8a3d 100%);
+  transition: opacity 0.2s;
+  font-size: $fs-button;
+  font-weight: $fw-semibold;
+  border-radius: $border-radius;
+  padding: $spacing-200 $spacing-300;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: $primary-font;
+  overflow-x: hidden;
+}
+
+header {
+  font-family: $primary-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-block-start: $spacing-400;
+  text-align: center;
+
+  h1 {
+    font-size: clamp(2rem, 5vw, $fs-h1);
+    font-weight: $fw-bold;
+    color: $clr-text-secondary;
+
+    span {
+      font-style: italic;
+    }
+  }
+  p {
+    font-size: clamp(1rem, 3.5vw, $fs-h3);
+    font-weight: $fw-semibold;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  gap: $spacing-300;
+  margin-block: $spacing-400;
+  align-items: center;
+
+  @media (width < 40em) {
+    flex-direction: column;
+  }
+}
+
+.select-planets {
+  background-image: url(../public/images/planets-bg.webp);
+  background-size: cover;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  padding: $spacing-200 $spacing-100;
+  width: 100%;
+  max-width: 18rem;
+  color: $clr-accent;
+  font-weight: $fw-semibold;
+  font-size: $fs-h3;
+  border-radius: $border-radius;
+
+  option {
+    background-color: #202038f1;
+    color: $clr-text-primary;
+    padding: 10px;
+    font-size: $fs-body;
+  }
+}
+
+.search-btn {
+  width: 100%;
+  max-width: 16rem;
+  padding-block: $spacing-100;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2rem;
+
+  @media (width > 40em) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.planet-details-card {
+  background: $glass-bg;
+  backdrop-filter: $glass-blur;
+  border-radius: $border-radius;
+  border: 1px solid $glass-border;
+  padding: clamp(1rem, 4vw, 2rem);
+  color: $clr-text-secondary;
+  max-width: 26rem;
+  box-shadow: 0 20px 60px rgba(150, 150, 150, 0.5);
+  position: relative;
+
+  h2 {
+    font-size: $fs-h3;
+    font-weight: $fw-semibold;
+    margin-bottom: $spacing-100;
+  }
+
+  img {
+    width: clamp(8rem, 40vw, 14rem);
+    max-width: 14rem;
+    margin-inline: auto;
+    display: block;
+    margin-bottom: $spacing-400;
+  }
+
+  .details {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-100;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: $fs-body;
+        line-height: $lh-relaxed;
+        color: $clr-text-secondary;
+        position: relative;
+        padding-left: 1.2rem;
+
+        &::before {
+          content: "◆";
+          position: absolute;
+          left: 0;
+          top: 0.225rem;
+          font-size: 0.7rem;
+          color: $clr-accent;
+        }
+      }
+    }
+  }
+}
+
+.planet-weight-card {
+  background: $glass-bg;
+  backdrop-filter: $glass-blur;
+  border-radius: $border-radius;
+  border: 1px solid $glass-border;
+  padding: clamp(1rem, 4vw, 2rem);
+  color: $clr-text-primary;
+  max-width: 26rem;
+  box-shadow: 0 20px 60px rgba(150, 150, 150, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-100;
+
+  h2 {
+    font-size: $fs-h3;
+    font-weight: $fw-semibold;
+    margin-bottom: $spacing-200;
+  }
+
+  input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid $glass-border;
+    border-radius: $border-radius;
+    padding: $spacing-200;
+    font-size: $fs-input;
+    color: $clr-text-primary;
+
+    &::placeholder {
+      color: $clr-text-muted;
+    }
+  }
+
+  h3 {
+    font-size: $fs-body;
+    font-weight: $fw-regular;
+    color: $clr-text-secondary;
+    margin-top: $spacing-300;
+  }
+
+  p {
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+    color: $clr-text-primary;
+  }
+}
